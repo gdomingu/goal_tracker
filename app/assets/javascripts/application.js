@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require progressbar.min.js
 //= require_tree .
