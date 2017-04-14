@@ -1,0 +1,14 @@
+{
+  "name": "goal_tracker",
+  "version": "1.0.0",
+  "description": "ruby on rails app for tracking government goals",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
