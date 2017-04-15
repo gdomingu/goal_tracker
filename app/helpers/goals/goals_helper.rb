@@ -1,0 +1,2 @@
+module Goals::GoalsHelper
+end

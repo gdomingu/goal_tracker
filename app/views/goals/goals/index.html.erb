@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Goals Goals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @goals_goals.each do |goals_goal| %>
+      <tr>
+        <td><%= link_to 'Show', goals_goal %></td>
+        <td><%= link_to 'Edit', edit_goals_goal_path(goals_goal) %></td>
+        <td><%= link_to 'Destroy', goals_goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Goals Goal', new_goals_goal_path %>
