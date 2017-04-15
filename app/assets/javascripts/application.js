@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require progressbar.min.js
+//= require countdown.min.js
 //= require_tree .

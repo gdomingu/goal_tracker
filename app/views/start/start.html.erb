@@ -49,24 +49,53 @@
 
       <section class="row text-center placeholders">
         <div class="col-6 col-sm-3 placeholder">
-          <div class="progress-container" data-progress-value="0.3"></div>
-          <h4>Label</h4>
-          <div class="text-muted">Something else</div>
+          <div class="progress-container" data-progress-value=<%= (14.00/36.00).round(2)%>>
+          </div>
+          <h4>Oakland GHG Reduction</h4>
+            <div class="text-muted">
+              <span><%= ((14.00/36.00)*100).round(2)%>% of goal</span>
+            </div>
+            <br>
+            <div class="text-muted">
+              <span class="page-timer" data-deadline=<%= Date.new(2020,01,01)%>></span>
+              <span><strong>left</strong></span>
+            </div>
         </div>
         <div class="col-6 col-sm-3 placeholder">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-          <h4>Label</h4>
-          <span class="text-muted">Something else</span>
+          <div class="progress-container" data-progress-value=<%= (27.6/50.00).round(2)%>></div>
+          <h4>California RPS Program</h4>
+          <div class="text-muted">
+            <span><%= ((27.6/50.00)*100).round(2)%>% of goal</span>
+          </div>
+          <br>
+          <div class="text-muted">
+            <span class="page-timer" data-deadline=<%= Date.new(2030,01,01)%>></span>
+            <span><strong>left</strong></span>
+          </div>
         </div>
         <div class="col-6 col-sm-3 placeholder">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-          <h4>Label</h4>
-          <span class="text-muted">Something else</span>
+          <div class="progress-container" data-progress-value=<%= (46/100.00).round(2)%>></div>
+          <h4>San Francisco 100% Renewable</h4>
+          <div class="text-muted">
+            <span><%= ((46/100.00)*100).round(2)%>% of goal</span>
+          </div>
+          <br>
+          <div class="text-muted">
+            <span class="page-timer" data-deadline=<%= Date.new(2030,01,01)%>></span>
+            <span><strong>left</strong></span>
+          </div>
         </div>
         <div class="col-6 col-sm-3 placeholder">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
-          <h4>Label</h4>
-          <span class="text-muted">Something else</span>
+          <div class="progress-container" data-progress-value=<%= (30/100.00).round(2)%>></div>
+          <h4>Adobe LLC 100% Renewable</h4>
+          <div class="text-muted">
+            <span><%= ((30/100.00)*100).round(2)%>% of goal</span>
+          </div>
+          <br>
+          <div class="text-muted">
+            <span class="page-timer" data-deadline=<%= Date.new(2035,01,01)%>></span>
+            <span><strong>left</strong></span>
+          </div>
         </div>
       </section>
 

@@ -4,6 +4,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     initProgressBar(containers[i]);
   }
 
+  var timers = document.getElementsByClassName('page-timer')
+  for (var i = 0; i < timers.length; i++) {
+    initCountDown(timers[i]);
+  }
+
   function initProgressBar(container) {
     var progressValue = container.getAttribute("data-progress-value");
     var bar = new ProgressBar.SemiCircle(container, {
@@ -18,25 +23,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
         value: '',
         alignToBottom: false
       },
-      from: {color: '#FFEA82'},
-      to: {color: '#ED6A5A'},
+      from: {color: '#ED6A5A'},
+      to: {color: '#a3ed5a'},
       // Set default step function for all animate calls
       step: (state, bar) => {
         bar.path.setAttribute('stroke', state.color);
-        var value = Math.round(bar.value() * 100);
-        if (value === 0) {
-          bar.setText('');
-        } else {
-          bar.setText(value);
-        }
+        // var value = Math.round(bar.value() * 100);
+        // if (value === 0) {
+        //   bar.setText('');
+        // } else {
+        //   bar.setText(value);
+        // }
 
-        bar.text.style.color = state.color;
+        // bar.text.style.color = state.color;
       }
     });
     bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
     bar.text.style.fontSize = '2rem';
 
     bar.animate(progressValue);  // Number from 0.0 to 1.0
+  }
+
+  function initCountDown(timer) {
+    var goalDate = timer.getAttribute("data-deadline");
+    countdown(
+      new Date(goalDate),
+      function(ts) {
+        timer.innerHTML = ts.toHTML("strong");
+      },
+      countdown.DEFAULTS
+    );
   }
 });
 
