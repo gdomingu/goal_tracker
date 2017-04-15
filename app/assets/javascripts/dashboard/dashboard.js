@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     countdown(
       new Date(goalDate),
       function(ts) {
-        timer.innerHTML = ts.toHTML("strong");
+        timer.innerHTML = ts.toHTML() + " left";
       },
       countdown.DEFAULTS
     );
