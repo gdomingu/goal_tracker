@@ -10,11 +10,11 @@
   </thead>
 
   <tbody>
-    <% @goals_goals.each do |goals_goal| %>
+    <% @goals.each do |goal| %>
       <tr>
-        <td><%= link_to 'Show', goals_goal %></td>
-        <td><%= link_to 'Edit', edit_goals_goal_path(goals_goal) %></td>
-        <td><%= link_to 'Destroy', goals_goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', goal %></td>
+        <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
+        <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Goals Goal', new_goals_goal_path %>
+<%= link_to 'New Goals Goal', new_goal_path %>

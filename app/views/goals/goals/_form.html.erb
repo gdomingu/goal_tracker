@@ -1,15 +1,21 @@
-<%= form_for(goals_goal) do |f| %>
-  <% if goals_goal.errors.any? %>
+<%= form_for(goal, url: goals_path) do |f| %>
+  <% if goal.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(goals_goal.errors.count, "error") %> prohibited this goals_goal from being saved:</h2>
+      <h2><%= pluralize(goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
 
       <ul>
-      <% goals_goal.errors.full_messages.each do |message| %>
+      <% goal.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
+  Title: <%= f.text_field :title %><br />
+  Subtitle : <%= f.text_field :subtitle %><br />
+  Description : <%= f.text_area :description %><br />
+  Deadline    : <%= f.date_field :deadline %><br />
+  Current Amount(float)    : <%= f.number_field :current_amount %><br />
+  Goal Amount(float)    : <%= f.number_field :goal_amount %><br />
 
   <div class="actions">
     <%= f.submit %>

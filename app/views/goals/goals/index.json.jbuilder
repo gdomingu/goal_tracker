@@ -1,1 +1,1 @@
-json.array! @goals_goals, partial: 'goals_goals/goals_goal', as: :goals_goal
+json.array! @goals, partial: 'goals/goal', as: :goals_goal

@@ -1,11 +1,15 @@
-<div class="progress-container" data-progress-value=<%= progress_value %>>
-</div>
-<h4><%= title %></h4>
-<br>
-<div class="text-muted">
-  <span><%= subtitle %></span>
-</div>
-<br>
-<div class="text-muted">
-  <span class="page-timer" data-deadline=<%= deadline %>></span>
+<div class="col-6 col-sm-3 card">
+  <div class="card-block">
+    <div class="progress-container" data-progress-value=<%= goal.percent_complete %>>
+    </div>
+    <h4><%= goal.title %></h4>
+    <br>
+    <div class="text-muted">
+      <span><%= goal.subtitle %></span>
+    </div>
+    <br>
+    <div class="text-muted">
+      <span class="page-timer" data-deadline=<%= goal.deadline %>></span>
+    </div>
+  </div>
 </div>

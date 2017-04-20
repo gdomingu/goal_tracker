@@ -48,46 +48,7 @@
       <h1>Dashboard</h1>
 
       <section class="row text-center placeholders">
-        <div class="col-6 col-sm-3 card">
-          <div class="card-block">
-            <%= render 'progress_container',
-                progress_value: (14.00/36.00).round(2),
-                title: "Oakland GHG Reduction",
-                subtitle: "36% below 2005 levels by 2020",
-                deadline: Date.new(2020,01,01)
-             %>
-          </div>
-        </div>
-        <div class="col-6 col-sm-3 placeholder card">
-          <div class="card-block">
-            <%= render 'progress_container',
-                progress_value: (27.6/50.00).round(2),
-                title: "California RPS Program",
-                subtitle: "50% of electricity from renewables by 2030",
-                deadline: Date.new(2030,01,01)
-             %>
-          </div>
-        </div>
-        <div class="col-6 col-sm-3 placeholder card">
-          <div class="card-block">
-            <%= render 'progress_container',
-                progress_value: (46/100.00).round(2),
-                title: "San Francisco 100% Renewable",
-                subtitle: "100% of electricity from renewables by 2030",
-                deadline: Date.new(2030,01,01)
-             %>
-          </div>
-        </div>
-        <div class="col-6 col-sm-3 placeholder card">
-          <div class="card-block">
-            <%= render 'progress_container',
-                progress_value: (30/100.00).round(2),
-                title: "Adobe LLC 100% Renewable",
-                subtitle: "100% of electricity from renewables by 2035",
-                deadline: Date.new(2035,01,01)
-             %>
-          </div>
-        </div>
+        <%= render partial: "progress_container", collection: @goals, as: :goal%>
       </section>
 
       <h2>Section title</h2>
