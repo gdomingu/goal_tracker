@@ -15,9 +15,21 @@
           <div class="col-3 col-sm-3">
             <div class="progress-container" data-progress-value=<%= goal.percent_complete %>>
             </div>
-            <strong>
-              <%= goal.current_amount.round(2) %>% out of <%= goal.goal_amount.round(2) %>%
-            </strong>
+            <p>
+              <strong>
+                Current: <%= goal.current_amount.round(2) %>%
+              </strong>
+            </p>
+            <p>
+              <strong>
+                Goal: <%= goal.goal_amount.round(2) %>%
+              </strong>
+            </p>
+            <p>
+              <strong>
+                Deadline: <%= goal.deadline.strftime('%Y') %>
+              </strong>
+            </p>
           </div>
           <div class="col-9 col-sm-9 text-wrap">
             <p><%= goal.description %></p>
