@@ -2,14 +2,24 @@
   <div class="card-block">
     <div class="progress-container" data-progress-value=<%= goal.percent_complete %>>
     </div>
-    <h4><%= goal.title %></h4>
+      <h4>
+        <%= goal.title %>
+      </h4>
     <br>
     <div class="text-muted">
       <span><%= goal.subtitle %></span>
     </div>
     <br>
     <div class="text-muted">
-      <span class="page-timer" data-deadline=<%= goal.deadline %>></span>
+      <span class="page-timer" data-deadline=<%= goal.deadline %>>
+      </span>
     </div>
+    <br>
+    <button type="link" data-toggle="modal" data-target=<%="##{goal.id}Modal"%> class="btn btn-primary">
+      Details
+    </button>
   </div>
 </div>
+
+<%= render 'modal', goal: goal %>
+

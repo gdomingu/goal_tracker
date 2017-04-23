@@ -44,3 +44,11 @@ Goals::Goal.where(
   current_amount: 50.00,
   goal_amount: 75.00
 ).first_or_create
+
+Goals::Goal.where(
+  title: "Hawaii 100% Renewable",
+  subtitle: "Renewable Portfolio Standard of 100% by 2045",
+  deadline: DateTime.new(2045,01,01),
+  current_amount: 25.80,
+  goal_amount: 100.00
+).first_or_create
