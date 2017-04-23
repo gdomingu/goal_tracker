@@ -1,5 +1,5 @@
 <div class="modal fade" id="<%="#{goal.id}Modal"%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel"><%= goal.title %></h5>
@@ -8,8 +8,23 @@
         </button>
       </div>
       <div class="modal-body text-left">
-      <p><%= goal.subtitle %></p>
-        <%= goal.description %>
+        <div class="row">
+          <div class="col-12">
+            <p></p>
+          </div>
+          <div class="col-3 col-sm-3">
+            <div class="progress-container" data-progress-value=<%= goal.percent_complete %>>
+            </div>
+            <strong>
+              <%= goal.current_amount.round(2) %>% out of <%= goal.goal_amount.round(2) %>%
+            </strong>
+          </div>
+          <div class="col-9 col-sm-9 text-wrap">
+            <p><%= goal.description %></p>
+            <span class="page-timer" data-deadline=<%= goal.deadline %>>
+            </span>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

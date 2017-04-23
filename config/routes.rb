@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   match "/goals/new", via: :get, to: "goals/goals#new", as: :new_goal
   match "/goals/:id", via: :get, to: "goals/goals#show", as: :goal
   match "/goals/:id/edit", via: :get, to: "goals/goals#edit", as: :edit_goal
-  match "/goals/:id/edit", via: [:patch, :put], to: "goals/goals#update"
+  match "/goals/:id", via: [:patch, :put], to: "goals/goals#update"
   match "/goals/:id", via: :delete, to: "goals/goals#destroy"
 
   root 'start#start'
