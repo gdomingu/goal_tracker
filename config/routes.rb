@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   match "/goals/:id/edit", via: :get, to: "goals/goals#edit", as: :edit_goal
   match "/goals/:id", via: [:patch, :put], to: "goals/goals#update"
   match "/goals/:id", via: :delete, to: "goals/goals#destroy"
+  match "/settings", via: :get, to: 'start#settings'
+  match "/profile", via: :get, to: 'start#profile'
+  match "/help", via: :get, to: 'start#help'
 
   root 'start#start'
 end
